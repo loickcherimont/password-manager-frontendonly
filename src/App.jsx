@@ -1,6 +1,6 @@
 import { Brand } from "./components/Brand"
 import { Row } from "./components/Row"
-import { SearchBar } from "./components/SearchBar"
+import { Form } from "./components/Form"
 
 function App() {
 
@@ -8,18 +8,14 @@ function App() {
     // Tip: Use h-auto to fill all available space in the browser 
     <div className="app flex h-auto">
       {/* ASIDE */}
-      <aside className="bg-teal-300 h-auto w-1/4">
-        <Brand name={"My Accesses"} />
+      <aside className="bg-teal-500 h-auto w-1/4">
+        <Brand name={"My Accesses 🔐"} />
       </aside>
       {/* MAIN */}
       <main className="w-3/4 bg-slate-100 h-full">
         {/* Header */}
         <header className="h-24 flex justify-center items-center">
-          <SearchBar
-            placeholder={"Search for your application"}
-            type={"text"}
-            value={""}
-          />
+          <Form/>
         </header>
 
         {/* Center */}
