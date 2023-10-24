@@ -10,4 +10,5 @@ This is the Front-End of a password manager application
 
 ## :white_check_mark: To Do
 ### WORK ON FORM
-- Transfer **login, password, link** to **Row** component
+- ~~Transfer **login, password, link** to **Row** component~~
+- Create a <link-login-password> component
