@@ -2,11 +2,13 @@ import { useRef } from "react";
 import { InputReadOnly } from "./InputReadOnly";
 import { Logo } from "./Logo";
 import logo from "../assets/img/twitter_logotest.png"
+import { Password } from "./Password";
 
 // Form to add new passwords
 export function Form({ codes, setCodes }) {
 
     // Informations for the attributes of inputs
+    // From the main html form (cf. line 63)
     const fields = [
         {
             type: "link",
@@ -24,12 +26,12 @@ export function Form({ codes, setCodes }) {
 
     const form = useRef(null);
 
+    // On submit, transfer link, password, login to TargetApplication (UI)
     const handleSubmit = (e) => {
         e.preventDefault();
 
         const formData = new FormData(form.current);
 
-        // To Do : Transfer these informations to Rows
         const link = formData.get("link");
         const login = formData.get("login");
         const password = formData.get("password");
@@ -44,27 +46,27 @@ export function Form({ codes, setCodes }) {
                 <div className="mt-3">
                     <InputReadOnly value={login} type={"text"} />
                 </div>
-                <div className="mt-3 flex space-x-4">
-                    <InputReadOnly value={password} type={"password"} />
-                    <button type="button" className="border border-slate-100 shadow-sm hover:bg-slate-100/50 transition duration-300 ease-in px-2 rounded">show/hide</button>
-                </div>
+                <Password value={password} />
             </div>
         ];
 
         // Update codes when data are submitted
         setCodes([...codes, ...newCodes]);
+
+        // Clean all fields after submit
+        form.current.reset();
     }
 
     return <div className="w-full mx-5 grid place-items-center">
 
-        {/* To Do : Verify which method is more adaptative for a password application between GET/POST */}
-        <form action="#" method="get" className="inline-grid grid-cols-4 gap-x-4" onSubmit={handleSubmit} ref={form}>
+        <form action="#" method="post" className="inline-grid grid-cols-4 gap-x-4" onSubmit={handleSubmit} ref={form}>
 
             {
                 fields.map((field, index) => {
+                    const { type, placeholder } = field;
                     return <div className="p-2" key={index}>
-                        <label htmlFor={field.type} className="block">Link</label>
-                        <input type="text" className="rounded pl-2 mt-1 placeholder:italic" placeholder={field.placeholder} name={field.type} id={field.type} required />
+                        <label htmlFor={type} className="block">{type.toUpperCase()}</label>
+                        <input type="text" className="rounded pl-2 mt-1 placeholder:italic" placeholder={placeholder} name={type} id={type} required />
                     </div>
                 })
             }
