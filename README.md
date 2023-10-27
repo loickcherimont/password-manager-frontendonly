@@ -11,4 +11,8 @@ This is the Front-End of a password manager application
 ## :white_check_mark: To Do
 ### WORK ON FORM
 - ~~Transfer **login, password, link** to **Row** component~~
-- Create a <link-login-password> component
+- ~~Create a button to show/hide password on **TargetApplication**~~
+<!-- - Write in capitalize the **labels** (login, link, password)
+- Replace logo test by first letter in a random background color -->
+- Make a responsive application
+<!-- - Write this Readme using your Github Model -->
