@@ -1,10 +1,11 @@
-import { Brand } from "./components/Brand"
+import { Aside } from "./components/Aside"
 import { Form } from "./components/Form"
 import { useState } from "react"
 import { InputReadOnly } from "./components/InputReadOnly";
 import { Logo } from "./components/Logo";
 import logo from "./assets/img/twitter_logotest.png"
 import { TargetApplication } from "./components/TargetApplication";
+import { Password } from "./components/Password";
 
 function App() {
 
@@ -19,22 +20,16 @@ function App() {
       <div className="mt-3">
         <InputReadOnly value={"testlck"} type={"text"} />
       </div>
-      <div className="mt-3 flex space-x-4">
-        <InputReadOnly value={"testlck"} type={"password"} />
-        <button type="button" className="border border-slate-100 shadow-sm hover:bg-slate-100/50 transition duration-300 ease-in px-2 rounded">show/hide</button>
-      </div>
+      <Password value={"testlck"}/>
     </TargetApplication>
   ]);
 
   return (
-    // Tip: Use h-auto to fill all available space in the browser 
-    <div className="app flex h-auto">
-      {/* ASIDE */}
-      <aside className="bg-teal-500 h-auto w-1/4">
-        <Brand name={"My Accesses 🔐"} />
-      </aside>
+    // Tip: Use "min-h-screen max-h-auto" to fill all available space in the browser 
+    <div className="app flex min-h-screen max-h-auto">
+      <Aside title={"My Accesses 🔐"}/>
       {/* MAIN */}
-      <main className="w-3/4 bg-slate-100 h-full">
+      <main className="w-3/4 bg-slate-100 min-h-screen max-h-auto">
         {/* Header */}
         <header className="h-24 flex justify-center items-center">
           <Form codes={codes} setCodes={setCodes} />
@@ -42,7 +37,6 @@ function App() {
 
         {/* Center */}
         <div className="center">
-
           <ul>
             {
               codes.map((targetApplication, index) => {
@@ -52,14 +46,8 @@ function App() {
               })
             }
           </ul>
-
-
-
         </div>
       </main>
-
-
-
     </div>
   )
 }
