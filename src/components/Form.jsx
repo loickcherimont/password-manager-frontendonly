@@ -57,7 +57,9 @@ export function Form({ codes, setCodes }) {
         form.current.reset();
     }
 
-    return <div className="w-full mx-5 grid place-items-center">
+    // By default
+    // Hidden this form layout on mobile
+    return <div className="w-full mx-5 grid place-items-center hidden lg:block">
 
         <form action="#" method="post" className="inline-grid grid-cols-4 gap-x-4" onSubmit={handleSubmit} ref={form}>
 
