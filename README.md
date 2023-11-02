@@ -117,8 +117,9 @@ Please add **setup** to run correctly this app
 - Replace logo test by first letter in a random background color -->
 - Make a responsive application
 - ~~Fix the **TargetApplication** style~~
-- Replace all following links by inputs (cf. **ToggleForm**)
+- ~~Replace all following links by inputs (cf. **ToggleForm**)~~
 - Show/Hide **ToggleForm**
+- Create a specific form for mobile and laptop
 <!-- - Create a section keywords for Readme file, telling about the notions on which we worked
 - Form 
 - Toggle menu
