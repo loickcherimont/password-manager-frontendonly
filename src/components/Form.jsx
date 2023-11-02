@@ -3,6 +3,7 @@ import { InputReadOnly } from "./InputReadOnly";
 import { Logo } from "./Logo";
 import logo from "../assets/img/twitter_logotest.png"
 import { Password } from "./Password";
+import { TargetApplication } from "./TargetApplication";
 
 // Form to add new passwords
 export function Form({ codes, setCodes }) {
@@ -37,17 +38,18 @@ export function Form({ codes, setCodes }) {
         const password = formData.get("password");
 
         const newCodes = [
-            <div className="rounded mx-20 my-3 p-3 justify-evenly bg-white shadow-md items-center">
+            <TargetApplication>
                 <Logo src={logo} />
-
-                <div className="mt-3">
-                    <InputReadOnly value={link} type={"text"} />
+                <div className="inputs">
+                    <div className="mt-3">
+                        <InputReadOnly value={link} type={"text"} />
+                    </div>
+                    <div className="mt-3">
+                        <InputReadOnly value={login} type={"text"} />
+                    </div>
+                    <Password value={password} />
                 </div>
-                <div className="mt-3">
-                    <InputReadOnly value={login} type={"text"} />
-                </div>
-                <Password value={password} />
-            </div>
+            </TargetApplication>
         ];
 
         // Update codes when data are submitted
@@ -59,9 +61,9 @@ export function Form({ codes, setCodes }) {
 
     // By default
     // Hidden this form layout on mobile
-    return <div className="w-full mx-5 grid place-items-center hidden lg:block">
+    return <div className="w-full mx-5 grid place-items-center lg:block">
 
-        <form action="#" method="post" className="inline-grid grid-cols-4 gap-x-4" onSubmit={handleSubmit} ref={form}>
+        <form action="#" method="post" className="lg:inline-grid grid-cols-4 gap-x-4" onSubmit={handleSubmit} ref={form}>
 
             {
                 fields.map((field, index) => {
