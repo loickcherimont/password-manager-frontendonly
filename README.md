@@ -113,13 +113,14 @@ Please add **setup** to run correctly this app
 ### WORK ON FORM
 - ~~Transfer **login, password, link** to **Row** component~~
 - ~~Create a button to show/hide password on **TargetApplication**~~
-<!-- - Write in capitalize the **labels** (login, link, password)
-- Replace logo test by first letter in a random background color -->
-- Make a responsive application
+- ~~Write in capitalize the **labels** (login, link, password)~~
+- Replace logo test by first letter in a random background color
+- ~~Make a responsive application~~
 - ~~Fix the **TargetApplication** style~~
 - ~~Replace all following links by inputs (cf. **ToggleForm**)~~
-- Show/Hide **ToggleForm**
-- Create a specific form for mobile and laptop
+- ~~Show/Hide **ToggleForm**~~
+- ~~Create a specific form for mobile and laptop~~
+- Style the app
 <!-- - Create a section keywords for Readme file, telling about the notions on which we worked
 - Form 
 - Toggle menu
