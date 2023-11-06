@@ -5,8 +5,9 @@ import { Logo } from "./components/Logo";
 import logo from "./assets/img/twitter_logotest.png"
 import { TargetApplication } from "./components/TargetApplication";
 import { Password } from "./components/Password";
-import { ToggleForm } from "./components/ToggleForm";
+import { MobileModal } from "./components/MobileModal";
 import { MobileNavigationBtn } from "./components/MobileNavigationBtn";
+import { MobileTitle } from "./components/MobileTitle";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
     </TargetApplication>
   ]);
 
+  // 
   const [userAskForm, setUserAskForm] = useState(false);
 
   return (
@@ -34,16 +36,18 @@ function App() {
       {/* MAIN */}
       <main className="w-full bg-slate-100 min-h-screen max-h-auto">
         {/* Header */}
-        <header className="flex justify-between bg-gradient-to-r from-cyan-500 to-teal-300  lg:justify-center lg:items-center lg:h-24">
+        <header className="flex justify-between items-center bg-gradient-to-r from-cyan-500 to-teal-300  lg:justify-center lg:items-center lg:h-24">
           <Logo src={logo} />
 
-          <Form codes={codes} setCodes={setCodes} /> {/* On mobile, form are by default hidden to see ToggleForm and Logo */}
+          <MobileTitle/> {/* Appear only on large screens*/}
 
-          <ToggleForm userAskForm={userAskForm} codes={codes} setCodes={setCodes}/>
+          <Form codes={codes} setCodes={setCodes} /> {/* On mobile, form are by default hidden to see MobileModal and Logo */}
 
           {/* Only for responsive */}
           <MobileNavigationBtn setUserAskForm={setUserAskForm}/>
         </header>
+
+        <MobileModal userAskForm={userAskForm} setUserAskForm={setUserAskForm} codes={codes} setCodes={setCodes}/> {/* Appear only on large screens*/}
 
         {/* Center */}
         <div className="center">
