@@ -7,6 +7,17 @@
 -->
 # :closed_lock_with_key: Password Manager (Front-End only)
 
+## Keywords
+<!-- Section telling about the notions on which we worked
+- Form 
+- Toggle menu
+- States
+- ...
+ -->
+- Form handling with ReactJS
+- Toggle password visibility
+- Update a list of items
+
 <!-- 
     INTRODUCTION
     Short summary explaining the reasons of the project and tell about worked concepts
@@ -14,12 +25,12 @@
     Ex: This is a Front-End project made with HTML, CSS for design and JavaScript to work on client-side validation (Constraint API)
 -->
 
-<!-- To Do : For later : Give informations about the goal of this project -->
-This is the Front-End of a password manager application
+This is the Front-End of a password manager application.
+I decided to code this app, to work on project near todolist but with password : show/hide password, add new password, etc. 
 
 
 <!-- To Do : Add a main page screenshot -->
-![MainImageForProject](https://placehold.co/500x300)
+![PasswordManager_MainView](/home/loickcherimont/Desktop/Projects/password-manager-frontendonly/github/img/PasswordManager_MainView.png)
 
 <!-- **************************************************************  -->
 
@@ -50,13 +61,7 @@ This is the Front-End of a password manager application
 -->
 
 ## :warning: Prerequisites
-Please add **prerequisites** to run correctly this app
-<!-- ```bash
-# Lorem ipsum dolor sit amet
-# Lorem ipsum dolor sit amet
-# Lorem ipsum dolor sit amet
-```
--->
+- NodeJS LTS version
 
 <!-- **************************************************************  -->
 
@@ -86,17 +91,16 @@ Please add **prerequisites** to run correctly this app
 -->
 
 ## :inbox_tray: Setup
-Please add **setup** to run correctly this app
-<!-- 1. Lorem ipsum dolor sit amet, `consectetur` adipiscing elit
-2. Lorem **ipsum dolor sit** amet, consectetur adipiscing elit
-```bash
-# Lorem ipsum dolor sit amet
-# Lorem ipsum dolor sit amet
-# Lorem ipsum dolor sit amet
-```
-3. Lorem ipsum dolor sit amet, *consectetur adipiscing elit*
+1. Download the project from "https://github.com/loickcherimont/password-manager-frontendonly"
+2. Unzip it on your workspace
+3. Download all dependencies and run the app
 
-![ExpectResultsAfterSetup](https://placehold.co/300x200) -->
+```bash
+npm install # required for dependencies
+npm run dev
+```
+
+4. Welcome on my app! 
 
 <!-- **************************************************************  -->
 
@@ -111,22 +115,7 @@ Please add **setup** to run correctly this app
 
 ## :rocket: Features
 ### WORK ON FORM
-- ~~Transfer **login, password, link** to **Row** component~~
-- ~~Create a button to show/hide password on **TargetApplication**~~
-- ~~Write in capitalize the **labels** (login, link, password)~~
-- Replace logo test by first letter in a random background color
-- ~~Make a responsive application~~
-- ~~Fix the **TargetApplication** style~~
-- ~~Replace all following links by inputs (cf. **ToggleForm**)~~
-- ~~Show/Hide **ToggleForm**~~
-- ~~Create a specific form for mobile and laptop~~
-- Style the app
-<!-- - Create a section keywords for Readme file, telling about the notions on which we worked
-- Form 
-- Toggle menu
-- States
-- ...
- -->
+- Need a back end (using Golang/NodeJS or both)
 
 <!-- **************************************************************  -->
 
@@ -140,5 +129,4 @@ Please add **setup** to run correctly this app
  -->
 
 ## :key: License
-Made by Loïck Chérimont
-Under **Please add a License**
+Made by "Loïck Chérimont"
