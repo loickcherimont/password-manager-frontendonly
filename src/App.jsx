@@ -7,7 +7,7 @@ import { TargetApplication } from "./components/TargetApplication";
 import { Password } from "./components/Password";
 import { MobileModal } from "./components/MobileModal";
 import { MobileNavigationBtn } from "./components/MobileNavigationBtn";
-import { MobileTitle } from "./components/MobileTitle";
+import { Brand } from "./components/Brand";
 
 function App() {
 
@@ -37,9 +37,8 @@ function App() {
       <main className="w-full bg-slate-100 min-h-screen max-h-auto">
         {/* Header */}
         <header className="flex justify-between items-center bg-gradient-to-r from-cyan-500 to-teal-300  lg:justify-center lg:items-center lg:h-24">
-          <Logo src={logo} />
 
-          <MobileTitle/> {/* Appear only on large screens*/}
+          <Brand /> {/* Appear only on large screens*/}
 
           <Form codes={codes} setCodes={setCodes} /> {/* On mobile, form are by default hidden to see MobileModal and Logo */}
 
