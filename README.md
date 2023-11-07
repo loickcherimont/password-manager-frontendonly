@@ -117,6 +117,7 @@ npm run dev
 ### WORK ON FORM
 - Need a back end (using Golang/NodeJS or both)
 
+<!-- - Add a footer with copyright -->
 <!-- **************************************************************  -->
 
 
