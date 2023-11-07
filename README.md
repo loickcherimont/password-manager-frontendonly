@@ -30,7 +30,7 @@ I decided to code this app, to work on project near todolist but with password :
 
 
 <!-- To Do : Add a main page screenshot -->
-![PasswordManager_MainView](/home/loickcherimont/Desktop/Projects/password-manager-frontendonly/github/img/PasswordManager_MainView.png)
+![PasswordManager_MainView](./github/img/PasswordManager_MainView.png)
 
 <!-- **************************************************************  -->
 
