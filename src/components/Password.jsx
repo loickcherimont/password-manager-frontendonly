@@ -12,6 +12,6 @@ export function Password({value}) {
     
     return <div className="mt-3 flex">
         <InputReadOnly value={value} type={isVisible ? "text" : "password"} />
-        <button type="button" className="border border-slate-100 shadow-sm hover:bg-slate-100/50 transition duration-300 ease-in px-2 rounded" onClick={handleClick}>show/hide</button>
+        <button type="button" className="border border-slate-100 shadow-sm hover:bg-slate-100/50 transition duration-300 ease-in px-2 rounded ml-2" onClick={handleClick}>show/hide</button>
     </div>
 }
